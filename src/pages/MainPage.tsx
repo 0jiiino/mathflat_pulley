@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-
+import { ProblemList } from "../components/problemSection/ProblemList";
 import { getProblemList } from "../services/problemApi";
 
 const MainPage = () => {
@@ -15,7 +15,9 @@ const MainPage = () => {
       className={
         "flex flex-row justify-center gap-[16px] my-[14px] h-[calc(100vh_-_28px)]"
       }
-    ></main>
+    >
+      <ProblemList />
+    </main>
   );
 };
 

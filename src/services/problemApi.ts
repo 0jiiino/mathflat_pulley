@@ -1,9 +1,10 @@
+import { problemMapper } from "./problemMapper";
 import { instance } from "./requestConfig";
 
 export const getProblemList = async () => {
-  const data = await instance.get("/problems");
+  const { data } = await instance.get("/problems");
 
-  return data;
+  return problemMapper(data);
 };
 
 export const getSimilarProblemList = async ({
@@ -17,5 +18,5 @@ export const getSimilarProblemList = async ({
     `problems/${problemId}/similarity?excludedProblemIds=${excludedIds.join(",")}`
   );
 
-  return data;
+  return problemMapper(data);
 };

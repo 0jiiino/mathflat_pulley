@@ -28,7 +28,7 @@ export const DeleteButton = ({ id }: { id: number }) => {
 
   return (
     <div
-      className="flex gap-[4px] items-center min-w-fit"
+      className="flex gap-[4px] items-center min-w-fit cursor-pointer"
       onClick={() => handleDeleteClick(id)}
     >
       <DeleteIcon />

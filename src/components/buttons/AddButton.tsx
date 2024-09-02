@@ -59,7 +59,7 @@ export const AddButton = ({
 
   return (
     <div
-      className="flex gap-[4px] items-center min-w-fit"
+      className="flex gap-[4px] items-center min-w-fit cursor-pointer"
       onClick={() => handleAddList(problemData)}
     >
       <AddCircleIcon backgroundColor={"#C0C0C0"} />

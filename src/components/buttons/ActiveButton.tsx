@@ -28,7 +28,7 @@ export const ActiveButton = ({
 
   return (
     <div
-      className="flex gap-[4px] items-center min-w-fit"
+      className="flex gap-[4px] items-center min-w-fit cursor-pointer"
       onClick={() => handleChangeActive(problemData)}
     >
       <AddCircleIcon backgroundColor={circleColor.icon} />

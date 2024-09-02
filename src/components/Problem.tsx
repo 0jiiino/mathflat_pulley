@@ -21,7 +21,7 @@ export const Problem = ({
     >
       <div className="flex flex-col gap-[4px] min-w-[40px]">
         <div
-          className={`flex justify-center items-center h-[20px] rounded-[4px] bg-[#F5F5F5] text-[${textColor}]`}
+          className={`flex justify-center items-center h-[20px] rounded-[4px] bg-[#F5F5F5] ${textColor}`}
         >
           <span className="leading-[18px] text-[14px] font-normal">
             {koreanLevel}

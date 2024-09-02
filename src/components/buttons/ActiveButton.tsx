@@ -13,7 +13,7 @@ export const ActiveButton = ({
 
   const circleColor = {
     icon: activeData?.id === problemData.id ? "#00ABFF" : "#C0C0C0",
-    text: activeData?.id === problemData.id ? "#00ABFF" : "#959595",
+    text: activeData?.id === problemData.id ? "text-blue" : "text-lightGray",
   };
 
   const queryClient = useQueryClient();
@@ -33,7 +33,7 @@ export const ActiveButton = ({
     >
       <AddCircleIcon backgroundColor={circleColor.icon} />
       <span
-        className={`leading-[18px] text-[12px] font-normal text-[${circleColor.text}]`}
+        className={`leading-[18px] text-[12px] font-normal ${circleColor.text}`}
       >
         유사문제
       </span>

@@ -3,31 +3,31 @@ export const changeLevelToKorean = (level: number) => {
     case 1:
       return {
         title: "하",
-        color: "#5C5C5C",
+        color: "text-gray",
       };
 
     case 2:
       return {
         title: "중하",
-        color: "#00ABFF",
+        color: "text-blue",
       };
 
     case 3:
       return {
         title: "중",
-        color: "#54C0B1",
+        color: "text-green",
       };
 
     case 4:
       return {
         title: "상",
-        color: "#FFC64D",
+        color: "text-yellow",
       };
 
     case 5:
       return {
         title: "최상",
-        color: "#FD5354",
+        color: "text-red",
       };
 
     default:

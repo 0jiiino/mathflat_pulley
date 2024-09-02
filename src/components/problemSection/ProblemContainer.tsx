@@ -32,7 +32,7 @@ export const ProblemContainer = ({
 
         <div className="flex gap-[12px] min-w-fit">
           <ActiveButton problemData={problemData} />
-          <DeleteButton id={id} />
+          <DeleteButton problemId={id} />
         </div>
       </section>
 

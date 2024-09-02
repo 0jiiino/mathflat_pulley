@@ -7,7 +7,7 @@ import {
   problemMapper,
 } from "../../services/problemMapper";
 
-export const DeleteButton = ({ id }: { id: number }) => {
+export const DeleteButton = ({ problemId }: { problemId: number }) => {
   const queryClient = useQueryClient();
 
   const { activeData, setActiveData } = useActiveData();
@@ -29,7 +29,7 @@ export const DeleteButton = ({ id }: { id: number }) => {
   return (
     <div
       className="flex gap-[4px] items-center min-w-fit cursor-pointer"
-      onClick={() => handleDeleteClick(id)}
+      onClick={() => handleDeleteClick(problemId)}
     >
       <DeleteIcon />
       <span className="leading-[18px] text-[12px] font-normal text-[#959595]">

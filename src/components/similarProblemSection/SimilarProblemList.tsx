@@ -26,7 +26,7 @@ export const SimilarProblemList = () => {
   if (!activeData?.id) return <PlaceHolder />;
 
   return (
-    <section className="w-[480px] bg-[#E8E8E8] rounded-[12px] flex flex-col px-[16px] pt-[17px] pb-[16px] gap-[16px]">
+    <section className="w-[480px] pc:w-[504px] bg-[#E8E8E8] rounded-[12px] flex flex-col px-[16px] pt-[17px] pb-[16px] gap-[16px]">
       <span className="flex tracking-[-1%] leading-[24px] text-[16px] font-bold text-white">
         유사 문항
       </span>

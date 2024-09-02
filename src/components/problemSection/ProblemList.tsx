@@ -12,7 +12,7 @@ export const ProblemList = () => {
   if (isLoading) return null;
 
   return (
-    <section className="w-[480px] bg-[#5C5C5C] rounded-[12px] flex flex-col gap-[16px] px-[16px] pt-[17px] relative">
+    <section className="w-[480px] pc:w-[712px] bg-[#5C5C5C] rounded-[12px] flex flex-col gap-[16px] px-[16px] pt-[17px] relative">
       <span className="flex tracking-[-1%] leading-[24px] text-[16px] font-bold text-white">
         학습지 상세 편집
       </span>

@@ -3,11 +3,11 @@ import { cloneDeep } from "lodash-es";
 
 import { useActiveData } from "../../store/useActiveData";
 import {
+  ProblemDataType,
   ProblemMapperInterface,
   problemMapper,
 } from "../../services/problemMapper";
 import SwapHorizIcon from "../icons/SwapHorizIcon";
-import { ProblemDataType } from "../../types/apiTypes";
 
 export const SwapHorizButton = ({
   problemData,

@@ -1,5 +1,5 @@
+import { ProblemDataType } from "../services/problemMapper";
 import { useActiveData } from "../store/useActiveData";
-import { ProblemDataType } from "../types/apiTypes";
 import {
   changeLevelToKorean,
   changeTypeTokorean,

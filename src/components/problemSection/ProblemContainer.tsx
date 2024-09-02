@@ -1,8 +1,8 @@
 import { Problem } from "../Problem";
 import { useActiveData } from "../../store/useActiveData";
-import { ProblemDataType } from "../../types/apiTypes";
 import { ActiveButton } from "../buttons/ActiveButton";
 import { DeleteButton } from "../buttons/DeleteButton";
+import { ProblemDataType } from "../../services/problemMapper";
 
 export const ProblemContainer = ({
   problemData,

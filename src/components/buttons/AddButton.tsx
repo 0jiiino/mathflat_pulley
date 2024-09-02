@@ -3,8 +3,8 @@ import { useQueryClient } from "@tanstack/react-query";
 
 import { useActiveData } from "../../store/useActiveData";
 import AddCircleIcon from "../icons/AddCircleIcon";
-import { ProblemDataType } from "../../types/apiTypes";
 import {
+  ProblemDataType,
   ProblemMapperInterface,
   problemMapper,
 } from "../../services/problemMapper";

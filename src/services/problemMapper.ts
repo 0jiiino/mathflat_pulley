@@ -1,8 +1,15 @@
-import { ProblemDataType } from "../types/apiTypes";
+export interface ProblemDataType {
+  id: number;
+  level: number;
+  type: number;
+  problemImageUrl: string;
+  title: string;
+  answerRate: number;
+}
 
-type LevelDataType = {
+interface LevelDataType {
   [key: string]: number;
-};
+}
 
 export interface ProblemMapperInterface {
   problemData: ProblemDataType[];

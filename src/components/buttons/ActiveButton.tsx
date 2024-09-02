@@ -2,7 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 
 import { useActiveData } from "../../store/useActiveData";
 import AddCircleIcon from "../icons/AddCircleIcon";
-import { ProblemDataType } from "../../types/apiTypes";
+import { ProblemDataType } from "../../services/problemMapper";
 
 export const ActiveButton = ({
   problemData,

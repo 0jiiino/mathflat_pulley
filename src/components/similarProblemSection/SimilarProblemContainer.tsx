@@ -1,7 +1,8 @@
 import { Problem } from "../Problem";
-import { ProblemDataType } from "../../types/apiTypes";
+
 import { SwapHorizButton } from "../buttons/SwapHorizButton";
 import { AddButton } from "../buttons/AddButton";
+import { ProblemDataType } from "../../services/problemMapper";
 
 export const SimilarProblemContainer = ({
   problemData,

@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { ProblemDataType } from "../types/apiTypes";
+
+import { ProblemDataType } from "../services/problemMapper";
 
 type ActiveDataType = null | ProblemDataType;
 

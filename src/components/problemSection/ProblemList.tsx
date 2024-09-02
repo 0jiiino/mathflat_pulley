@@ -4,12 +4,10 @@ import { ProblemContainer } from "./ProblemContainer";
 import { getProblemList } from "../../services/problemApi";
 
 export const ProblemList = () => {
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["problemList"],
     queryFn: () => getProblemList(),
   });
-
-  if (isLoading) return null;
 
   return (
     <section className="w-[480px] pc:w-[712px] bg-[#5C5C5C] rounded-[12px] flex flex-col gap-[16px] px-[16px] pt-[17px] relative">

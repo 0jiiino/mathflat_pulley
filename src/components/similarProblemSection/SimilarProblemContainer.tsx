@@ -1,7 +1,5 @@
 import { Problem } from "../Problem";
-import { useActiveData } from "../../store/useActiveData";
 import { ProblemDataType } from "../../types/apiTypes";
-import { DeleteButton } from "../buttons/DeleteButton";
 import { SwapHorizButton } from "../buttons/SwapHorizButton";
 import { AddButton } from "../buttons/AddButton";
 
@@ -12,15 +10,11 @@ export const SimilarProblemContainer = ({
   problemData: ProblemDataType;
   order: number;
 }) => {
-  const activeData = useActiveData((state) => state.activeData);
-
-  const { id, title } = problemData;
+  const { title } = problemData;
 
   return (
-    <article
-      className={`${activeData?.id === problemData.id ? "border-solid border-[3px] border-[#00ABFF]" : ""}`}
-    >
-      <section className="flex items-center justify-between w-full h-[44px] pl-[28px] pr-[16px] bg-[#FAFAFA] gap-[13px]">
+    <article>
+      <section className="flex items-center justify-between w-full h-[44px] pl-[28px] pr-[16px] bg-[#FAFAFA] gap-[13px] rounded-t-[12px]">
         <div className="flex gap-[32px]">
           <span className="leading-[24px] text-[18px] font-bold tracking-[-1%]">
             {order}

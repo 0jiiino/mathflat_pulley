@@ -23,7 +23,7 @@ export const SimilarProblemList = () => {
     enabled: !!activeData?.id,
   });
 
-  if (!activeData?.id) return <PlaceHolder />;
+  if (!activeData?.id || isLoading) return <PlaceHolder />;
 
   return (
     <section className="w-[480px] pc:w-[504px] bg-[#E8E8E8] rounded-[12px] flex flex-col px-[16px] pt-[17px] pb-[16px] gap-[16px]">
@@ -32,15 +32,13 @@ export const SimilarProblemList = () => {
       </span>
 
       <section className="customScrollBar w-full flex flex-col gap-[16px] overflow-x-hidden overflow-y-scroll">
-        {isLoading
-          ? null
-          : data?.problemData.map((problem, index) => (
-              <SimilarProblemContainer
-                key={problem.id}
-                problemData={problem}
-                order={index + 1}
-              />
-            ))}
+        {data?.problemData.map((problem, index) => (
+          <SimilarProblemContainer
+            key={problem.id}
+            problemData={problem}
+            order={index + 1}
+          />
+        ))}
       </section>
     </section>
   );

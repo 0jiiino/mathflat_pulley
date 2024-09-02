@@ -1,16 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
 import { ProblemList } from "../components/problemSection/ProblemList";
 import { SimilarProblemList } from "../components/similarProblemSection/SimilarProblemList";
-import { getProblemList } from "../services/problemApi";
 
 const MainPage = () => {
-  const { isLoading } = useQuery({
-    queryKey: ["problemList"],
-    queryFn: () => getProblemList(),
-  });
-
-  if (isLoading) return null;
-
   return (
     <main
       className={

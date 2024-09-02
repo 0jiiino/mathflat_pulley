@@ -9,16 +9,16 @@ import AddCircleIcon from "../icons/AddCircleIcon";
 export const SimilarProblemList = () => {
   const activeData = useActiveData((state) => state.activeData);
 
-  const { problemIdList } = useQueryClient().getQueryData([
+  const data = useQueryClient().getQueryData([
     "problemList",
   ]) as ProblemMapperInterface;
 
-  const { data, isLoading } = useQuery({
+  const { data: similarList, isLoading } = useQuery({
     queryKey: ["similarList"],
     queryFn: () =>
       getSimilarProblemList({
         problemId: activeData?.id as number,
-        excludedIds: problemIdList,
+        excludedIds: data?.problemIdList,
       }),
     enabled: !!activeData?.id,
   });
@@ -32,7 +32,7 @@ export const SimilarProblemList = () => {
       </span>
 
       <section className="customScrollBar w-full flex flex-col gap-[16px] overflow-x-hidden overflow-y-scroll">
-        {data?.problemData.map((problem, index) => (
+        {similarList?.problemData.map((problem, index) => (
           <SimilarProblemContainer
             key={problem.id}
             problemData={problem}

@@ -15,8 +15,6 @@ export const DeleteButton = ({ id }: { id: number }) => {
   const handleDeleteClick = (id: number) => {
     if (id === activeData?.id) {
       setActiveData(null);
-
-      return;
     }
 
     const { problemData } = queryClient.getQueryData([

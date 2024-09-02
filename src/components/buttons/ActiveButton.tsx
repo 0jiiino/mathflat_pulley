@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+
 import { useActiveData } from "../../store/useActiveData";
 import AddCircleIcon from "../icons/AddCircleIcon";
 import { ProblemDataType } from "../../types/apiTypes";
@@ -10,16 +11,20 @@ export const ActiveButton = ({
 }) => {
   const { activeData, setActiveData } = useActiveData();
 
-  const circleColor = useMemo(
-    () => ({
-      icon: activeData?.id === problemData.id ? "#00ABFF" : "#C0C0C0",
-      text: activeData?.id === problemData.id ? "#00ABFF" : "#959595",
-    }),
-    [activeData?.id]
-  );
+  const circleColor = {
+    icon: activeData?.id === problemData.id ? "#00ABFF" : "#C0C0C0",
+    text: activeData?.id === problemData.id ? "#00ABFF" : "#959595",
+  };
 
-  const handleChangeActive = (newData: ProblemDataType) =>
+  const queryClient = useQueryClient();
+
+  const handleChangeActive = (newData: ProblemDataType) => {
+    if (activeData) {
+      queryClient.invalidateQueries({ queryKey: ["similarList"] });
+    }
+
     setActiveData(newData);
+  };
 
   return (
     <div

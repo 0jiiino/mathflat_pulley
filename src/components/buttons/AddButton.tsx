@@ -28,9 +28,9 @@ export const AddButton = ({
       (problem) => problem.id === activeData?.id
     );
 
-    const newProblemList = cloneDeep(problemData).splice(
-      swapProblemIndex - 1,
-      1,
+    const newProblemList = cloneDeep(problemData).toSpliced(
+      swapProblemIndex,
+      0,
       currentItem
     );
 
@@ -47,7 +47,7 @@ export const AddButton = ({
       (problem) => problem.id === currentItem.id
     );
 
-    const newSimilarList = cloneDeep(similarData).splice(
+    const newSimilarList = cloneDeep(similarData).toSpliced(
       swapSimilarProblemIndex,
       1
     );

@@ -3,14 +3,14 @@ import { ProblemDataType } from "../types/apiTypes";
 import {
   changeLevelToKorean,
   changeTypeTokorean,
-} from "../utils/changeKoreaUtils";
+} from "../utils/changeToKoreanUtils";
 
 export const Problem = ({
   problemData: { level, type, problemImageUrl, answerRate, id },
 }: {
   problemData: ProblemDataType;
 }) => {
-  const koreanLevel = changeLevelToKorean(level);
+  const { title: koreanLevel, color: textColor } = changeLevelToKorean(level);
   const koreanType = changeTypeTokorean(type);
 
   const activeData = useActiveData((state) => state.activeData);
@@ -20,7 +20,9 @@ export const Problem = ({
       className={`flex gap-[15px] w-full px-[16px] py-[24px] bg-white ${activeData?.id === id ? "border-solid border-b-[3px] border-r-[3px] border-l-[3px] border-b-[#00ABFF] border-r-[#00ABFF] border-l-[#00ABFF]" : ""} rounded-b-[12px]`}
     >
       <div className="flex flex-col gap-[4px] min-w-[40px]">
-        <div className="flex justify-center items-center h-[20px] rounded-[4px] bg-[#F5F5F5]">
+        <div
+          className={`flex justify-center items-center h-[20px] rounded-[4px] bg-[#F5F5F5] text-[${textColor}]`}
+        >
           <span className="leading-[18px] text-[14px] font-normal">
             {koreanLevel}
           </span>

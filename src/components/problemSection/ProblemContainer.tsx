@@ -16,10 +16,10 @@ export const ProblemContainer = ({
   const { id, title } = problemData;
 
   return (
-    <article
-      className={`${activeData?.id === problemData.id ? "border-solid border-[3px] border-[#00ABFF]" : ""}`}
-    >
-      <section className="flex items-center justify-between w-full h-[44px] pl-[28px] pr-[16px] bg-[#FAFAFA] gap-[13px]">
+    <article>
+      <section
+        className={`flex items-center justify-between w-full h-[44px] pl-[28px] pr-[16px] bg-[#FAFAFA] gap-[13px] rounded-t-[12px] ${activeData?.id === problemData.id ? "border-solid border-t-[3px] border-r-[3px] border-l-[3px] border-t-[#00ABFF] border-r-[#00ABFF] border-l-[#00ABFF]" : ""}`}
+      >
         <div className="flex gap-[32px]">
           <span className="leading-[24px] text-[18px] font-bold tracking-[-1%]">
             {order}
